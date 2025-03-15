@@ -88,6 +88,8 @@ require('kickstart.options')
 
 require('kickstart.keymap')
 
+require('custom.remap')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -127,7 +129,6 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
     -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-    'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
     -- NOTE: Plugins can also be added by using a table,
     -- with the first argument being the link and the following
@@ -156,9 +157,6 @@ require('lazy').setup({
     -- you do for a plugin at the top level, you can do for a dependency.
     --
     -- Use the `dependencies` key to specify the dependencies of a particular plugin
-
-    -- provides the comment commands family (`gcc`, `gc{`, `gc}`, etc.)
-    'numToStr/Comment.nvim',
 
 
     -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
